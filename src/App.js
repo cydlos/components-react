@@ -46,24 +46,24 @@ export default App;
 //useState and useEffect functions
 //useEffect updates once the statue of a clicked button
 
-const Change = () => {
-  const [contar, setContar] = React.useState(0);
-  const [dados, setDados] = React.useState(null);
+// const Change = () => {
+//   const [contar, setContar] = React.useState(0);
+//   const [dados, setDados] = React.useState(null);
 
-  React.useEffect(() => {
-    fetch('https://ranekapi.origamid.dev/json/api/produto/notebook')
-      .then((response) => response.json())
-      .then((json) => setDados(json));
-  }, []);
+//   React.useEffect(() => {
+//     fetch('https://ranekapi.origamid.dev/json/api/produto/notebook')
+//       .then((response) => response.json())
+//       .then((json) => setDados(json));
+//   }, []);
 
-  function handleClick() {
-    setContar(contar + 1);
-  }
+//   function handleClick() {
+//     setContar(contar + 1);
+//   }
 
-  return (
-    <div>
-      <button onClick={handleClick}>{contar}</button>
-      {dados && <Produto produto={dados} />}
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <button onClick={handleClick}>{contar}</button>
+//       {dados && <Produto produto={dados} />}
+//     </div>
+//   );
+// }
