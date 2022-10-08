@@ -33,6 +33,7 @@ const App = () => {
       <button style={{ margin: '1rem' }} onClick={handleClick}>
         smartphone
       </button>
+      <Produto produto={produto} />
     </div>
   );
 };
