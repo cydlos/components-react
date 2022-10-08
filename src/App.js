@@ -1,69 +1,41 @@
-import './App.css';
-import Produto from './Produto';
-
+// Quando o usuário clicar em um dos botões, faça um fetch do produto clicado utilizando a api abaixo
+// https://ranekapi.origamid.dev/json/api/produto/notebook
+// https://ranekapi.origamid.dev/json/api/produto/smartphone
+// Mostre o nome e preço na tela (separe essa informação em um componente Produto.js)
+// Defina o produto clicado como uma preferência do usuário no localStorage
+// Quando o usuário entrar no site, se existe um produto no localStorage, faça o fetch do mesmo
 import React from 'react';
-
-// const App = () => {
-//   const [ativo, setAtivo] = React.useState(false);
-
-//   return (
-//     <button onClick={() => setAtivo(!ativo)}>
-//       {ativo ? 'Ativo' : 'Inativo'}
-//     </button>
-//   );
-// };
-
-// export default App;
+import Produto from './Produto';
 
 
 const App = () => {
-  const [dados, setDados] = React.useState(null);
-  const [carregando, setCarregando] = React.useState(null);
+  const [produto, setProduto] = React.useState(null);
 
-async function handleClick(event) {
-  setCarregando(true);
-  const response = await fetch(
-    `https://ranekapi.origamid.dev/json/api/produto/${event.target.innerText}`
-  );
-  const json = await response.json();
-  setDados(json);
-  setCarregando(false);
+  React.useEffect
+  (() => { const produtoLocal = window.localStorage.getItem('produto');
+    if (produtoLocal !== null) setProduto(produtoLocal);
+  }, []);
+
+  React.useEffect
+  (() => { if (produto !== null) window.localStorage.setItem('produto', produto);
+  }, [produto]);
+
+  function handleClick({ target }) {
+    setProduto(target.innerText);
   }
+
   return (
-    <>
-      <button onClick={handleClick}>Macbook</button>
-      <button onClick={handleClick}>iPad</button>
-      <button onClick={handleClick}>iPhone</button>
-      {carregando && <p>Carregando...</p>}
-      {!carregando && dados && <Produto produto={dados} />}
-    </>
-    // or: {!carregando ? <p>Carregando...</p> : <Produto produto={dados} />} -> ternary operator
+    <div>
+      <h1>Preferência: {produto}</h1>
+      <button style={{ margin: '1rem' }} onClick={handleClick}>
+        notebook
+      </button>
+      <button style={{ margin: '1rem' }} onClick={handleClick}>
+        smartphone
+      </button>
+      <Produto produto={produto} />
+    </div>
   );
 };
 
 export default App;
-
-//useState and useEffect functions
-//useEffect updates once the statue of a clicked button
-
-// const Change = () => {
-//   const [contar, setContar] = React.useState(0);
-//   const [dados, setDados] = React.useState(null);
-
-//   React.useEffect(() => {
-//     fetch('https://ranekapi.origamid.dev/json/api/produto/notebook')
-//       .then((response) => response.json())
-//       .then((json) => setDados(json));
-//   }, []);
-
-//   function handleClick() {
-//     setContar(contar + 1);
-//   }
-
-//   return (
-//     <div>
-//       <button onClick={handleClick}>{contar}</button>
-//       {dados && <Produto produto={dados} />}
-//     </div>
-//   );
-// }
