@@ -1,23 +1,17 @@
 import React from "react";
+import { globalContext } from "./GlobalContext";
 
-const Produto = ({ produto }) => {
-    const [dados, setDados] = React.useState(null);
+const Produto = () => {
+  const global = React.useContext(globalContext);
+  const {limparDados} = React.useContext(globalContext);
 
-    React.useEffect(() => {
-        if (produto !== null)
-            fetch(`https://ranekapi.origamid.dev/json/api/produto/${produto}`)
-                .then((response) => response.json())
-                .then((json) => setDados(json));
-    }
-        , [produto]);
-
-    if (dados === null) return null;
-    return (
-        <div>
-            <h1>{dados.nome}</h1>
-            <p>R$ {dados.preco}</p>
-        </div>
-    );
-};
+  if (global.dados === null) return null;
+  return (
+    <div>
+      <h1>{ global.dados.map(global =><li key={global.id}>{global.nome}</li>) }</h1>
+      <button onClick={limparDados}>Limpar Dados</button>
+    </div>
+  );
+}
 
 export default Produto;
