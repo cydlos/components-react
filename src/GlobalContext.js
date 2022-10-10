@@ -1,6 +1,6 @@
 import React from "react";
 
-export const globalContext = React.createContext();
+export const GlobalContext = React.createContext();
 
 export const GlobalStorage = ({ children }) => {
     const [dados, setDados] = React.useState(null);
@@ -15,9 +15,10 @@ export const GlobalStorage = ({ children }) => {
         setDados(null);
     }
 
+
     return (
-        <globalContext.Provider value={{ dados, limparDados }}>
+        <GlobalContext.Provider value={{ limparDados, dados,  setDados}}>
             {children}
-        </globalContext.Provider>
+        </GlobalContext.Provider>
     );
 };

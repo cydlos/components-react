@@ -1,14 +1,13 @@
-import React from "react";
 import { GlobalStorage } from "./GlobalContext";
 import Produto from "./Produto";
+import Limpar from "./Limpar";
 
 const App = () => {
   return (
-    <div>
       <GlobalStorage>
         <Produto />
+        <Limpar />
       </GlobalStorage>
-    </div>
   );
 }
 
