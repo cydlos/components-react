@@ -1,5 +1,3 @@
-// A checkbox component for React JS do check if a user accepts the condition terms
-
 import React from "react";
 
 const App = () => {
@@ -20,7 +18,8 @@ const App = () => {
         <input type="checkbox" checked={checked} onChange={handleClick} />{" "}
         Aceito os termos{" "}
       </label>{" "}
-      {checked  && show && <p>Formulário enviado</p>} <button>Enviar</button>{" "}
+      <button disabled={!checked}>Enviar</button>
+      {checked  && show && <p>Formulário enviado</p>}
     </form>
   );
 };
