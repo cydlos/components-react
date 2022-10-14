@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const App = () => {
   const [cores, setCores] = React.useState([]);
-  const arrayCores = ['azul', 'vermelho', 'verde', 'amarelo'];
+  const arrayCores = ["azul", "vermelho", "verde", "amarelo"];
 
   function handleChange({ target }) {
     if (target.checked) {
@@ -20,7 +20,8 @@ const App = () => {
     <form>
       {arrayCores.map((cor) => (
         <label key={cor}>
-          <input type="checkbox"
+          <input
+            type="checkbox"
             value={cor}
             checked={handleChecked(cor)}
             onChange={handleChange}
@@ -28,17 +29,14 @@ const App = () => {
           {cor}
         </label>
       ))}
-      <p>{cores.join(', ')}</p>
+      <p>{cores.join(", ")}</p>
       <ul>
         {cores.map((cor) => (
           <li key={cor}>{cor}</li>
         ))}
       </ul>
     </form>
-
   );
-}
-
-
+};
 
 export default App;
