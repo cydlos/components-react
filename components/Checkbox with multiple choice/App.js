@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const arrayCores = ["azul", "vermelho", "verde", "amarelo"];
+const arrayCores = ["azul", "vermelho", "verde", "amarelo", "laranja", "roxo"];
 const App = () => {
   const [cores, setCores] = React.useState([]);
 
