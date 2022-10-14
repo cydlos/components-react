@@ -1,8 +1,9 @@
 import React from "react";
 
+
+const arrayCores = ["azul", "vermelho", "verde", "amarelo"];
 const App = () => {
   const [cores, setCores] = React.useState([]);
-  const arrayCores = ["azul", "vermelho", "verde", "amarelo"];
 
   function handleChange({ target }) {
     if (target.checked) {
@@ -30,11 +31,6 @@ const App = () => {
         </label>
       ))}
       <p>{cores.join(", ")}</p>
-      <ul>
-        {cores.map((cor) => (
-          <li key={cor}>{cor}</li>
-        ))}
-      </ul>
     </form>
   );
 };
