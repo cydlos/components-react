@@ -17,5 +17,5 @@ return (
     </section>
     );
 };
-// O {...produto} se relaciona às propriedades de Produto.js
+
 export default Produtos;
