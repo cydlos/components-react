@@ -2,6 +2,7 @@ import React from 'react';
 
 const App = () => {
   const [cores, setCores] = React.useState([]);
+  const arrayCores = ['azul', 'vermelho', 'verde', 'amarelo'];
 
   function handleChange({ target }) {
     if (target.checked) {
@@ -17,58 +18,27 @@ const App = () => {
 
   return (
     <form>
-      <label>
-        <input
-          type="checkbox"
-          value="azul"
-          checked={handleChecked('azul')}
-          onChange={handleChange}
-        />
-        Azul
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          value="vermelho"
-          checked={handleChecked('vermelho')}
-          onChange={handleChange}
-        />
-        Vermelho
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          value="verde"
-          checked={handleChecked('verde')}
-          onChange={handleChange}
-        />
-        Verde
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          value="amarelo"
-          checked={handleChecked('amarelo')}
-          onChange={handleChange}
-        />
-        Amarelo
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          value="roxo"
-          checked={handleChecked('roxo')}
-          onChange={handleChange}
-        />
-        Roxo
-      </label>
+      {arrayCores.map((cor) => (
+        <label key={cor}>
+          <input type="checkbox"
+            value={cor}
+            checked={handleChecked(cor)}
+            onChange={handleChange}
+          />
+          {cor}
+        </label>
+      ))}
+      <p>{cores.join(', ')}</p>
       <ul>
         {cores.map((cor) => (
           <li key={cor}>{cor}</li>
         ))}
       </ul>
     </form>
+
   );
-};
+}
+
+
 
 export default App;
