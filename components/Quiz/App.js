@@ -3,7 +3,7 @@ import Radio from './Radio';
 
 const perguntas = [
   {
-    pergunta: 'Qual a única seleção pentacampeã de futebol?',
+    pergunta: 'Qual a única seleção pentacampeã mundial de futebol?',
     options: [
       'Brasil',
       'Alemanha',
