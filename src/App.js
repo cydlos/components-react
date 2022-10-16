@@ -1,8 +1,3 @@
-// Creates a 4-question-quiz
-// Each question has only 1 correct answer
-// Each correct question sums 1 point
-// The final score is displayend by the end of the quiz
-
 import React, { useState } from "react";
 import questions from "./questions";
 
