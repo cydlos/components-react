@@ -3,35 +3,35 @@ import Radio from './Radio';
 
 const perguntas = [
   {
-    pergunta: 'Qual método é utilizado para criar componentes?',
+    pergunta: 'Qual a única seleção pentacampeã de futebol?',
     options: [
-      'React.makeComponent()',
-      'React.createComponent()',
-      'React.createElement()',
+      'Brasil',
+      'Alemanha',
+      'Itália',
     ],
-    resposta: 'React.createElement()',
+    resposta: 'Brasil',
     id: 'p1',
   },
   {
-    pergunta: 'Como importamos um componente externo?',
+    pergunta: 'Qual a capital do Rio Grande do Sul?',
     options: [
-      'import Component from "./Component"',
-      'require("./Component")',
-      'import "./Component"',
+      'Pelotas',
+      'Porto Alegre',
+      'Rio Grande',
     ],
-    resposta: 'import Component from "./Component"',
+    resposta: 'Porto Alegre',
     id: 'p2',
   },
   {
-    pergunta: 'Qual hook não é nativo?',
-    options: ['useEffect()', 'useFetch()', 'useCallback()'],
-    resposta: 'useFetch()',
+    pergunta: 'Quantas estrelas tem a bandeira do Brasil?',
+    options: ['25', '20', '27'],
+    resposta: '27',
     id: 'p3',
   },
   {
-    pergunta: 'Qual palavra deve ser utilizada para criarmos um hook?',
-    options: ['set', 'get', 'use'],
-    resposta: 'use',
+    pergunta: 'Quem é o vilão do Peter Pan?',
+    options: ['Capitão Gancho', 'Thanos', 'Scar'],
+    resposta: 'Capitão Gancho',
     id: 'p4',
   },
 ];
