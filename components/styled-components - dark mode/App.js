@@ -26,7 +26,7 @@ const App = () => {
   return (
     <Container ativo={ativo} onClick={() => setAtivo(!ativo)}>
       <Button ativo={ativo} onClick={() => setAtivo(!ativo)}>
-        {ativo ? 'Modo noturno ativado' : 'Ativar modo noturno'}
+        {ativo ? 'Dark mode on' : 'Activate dark mode'}
       </Button>
   </Container>
   );
