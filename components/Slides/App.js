@@ -10,11 +10,11 @@ const App = () => {
     },
     {
       id: 'slide2',
-      text: 'Second slide',
+      text: 'Second Slide',
     },
     {
       id: 'slide3',
-      text: 'Third slide',
+      text: 'Third Slide',
     },
   ];
 
