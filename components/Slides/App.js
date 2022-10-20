@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './Slide.module.css';
 import Slide from './Slide';
 
 const App = () => {
