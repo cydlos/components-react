@@ -59,32 +59,32 @@ const App = () => {
       <input
         type="text"
         id="numero"
-        value={form.numero}
+        value={form.number}
         onChange={handleChange}
       />
-      <label htmlFor="bairro">Bairro</label>
+      <label htmlFor="neighborhood">Neighborhood</label>
       <input
         type="text"
-        id="bairro"
-        value={form.bairro}
+        id="neighborhood"
+        value={form.neighborhood}
         onChange={handleChange}
       />
-      <label htmlFor="cidade">Cidade</label>
+      <label htmlFor="city">City</label>
       <input
         type="text"
-        id="cidade"
+        id="city"
         value={form.cidade}
         onChange={handleChange}
       />
-      <label htmlFor="estado">Estado</label>
+      <label htmlFor="state">State</label>
       <input
         type="text"
-        id="estado"
-        value={form.estado}
+        id="state"
+        value={form.state}
         onChange={handleChange}
       />
-      <button>Enviar</button>
-      {response && response.ok && <p>Usuário Criado</p>}
+      <button>Send</button>
+      {response && response.ok && <p>User Created</p>}
     </form>
   );
 };
