@@ -1,36 +1,36 @@
 import React from "react";
 
 
-const arrayCores = ["azul", "vermelho", "verde", "amarelo", "laranja", "roxo"];
+const arrayCores = ["bluel", "red", "green", "yellow", "orange", "purple"];
 const App = () => {
-  const [cores, setCores] = React.useState([]);
+  const [colors, setColors] = React.useState([]);
 
   function handleChange({ target }) {
     if (target.checked) {
-      setCores([...cores, target.value]);
+      setColors([...colors, target.value]);
     } else {
-      setCores(cores.filter((cor) => cor !== target.value));
+      setColors(colors.filter((color) => color !== target.value));
     }
   }
 
-  function handleChecked(cor) {
-    return cores.includes(cor);
+  function handleChecked(color) {
+    return colors.includes(color);
   }
 
   return (
     <form>
-      {arrayCores.map((cor) => (
-        <label key={cor}>
+      {arrayCores.map((color) => (
+        <label key={color}>
           <input
             type="checkbox"
-            value={cor}
-            checked={handleChecked(cor)}
+            value={color}
+            checked={handleChecked(color)}
             onChange={handleChange}
           />
-          {cor}
+          {color}
         </label>
       ))}
-      <p>{cores.join(", ")}</p>
+      <p>{colors.join(", ")}</p>
     </form>
   );
 };

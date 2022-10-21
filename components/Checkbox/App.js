@@ -16,10 +16,10 @@ const App = () => {
       <label>
         {" "}
         <input type="checkbox" checked={checked} onChange={handleClick} />{" "}
-        Aceito os termos{" "}
+        I agree with the terms.{" "}
       </label>{" "}
-      <button disabled={!checked}>Enviar</button>
-      {checked  && show && <p>Formulário enviado</p>}
+      <button disabled={!checked}>Send</button>
+      {checked  && show && <p>Form Sent</p>}
     </form>
   );
 };

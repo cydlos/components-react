@@ -1,13 +1,13 @@
-import styles from './Produto.module.css';
+import styles from './Product.module.css';
 
-const Produto = () => {
+const Product = () => {
   return (
     <div>
-      <h1 className={styles.titulo}>Notebook</h1>
-      <p className={styles.preco}>R$ 12000</p>
-      <button className={styles.comprar}>Comprar</button>
+      <h1 className={styles.title}>Notebook</h1>
+      <p className={styles.price}>$ 12000</p>
+      <button className={styles.buy}>Buy</button>
     </div>
   );
 };
 
-export default Produto;
+export default Product;
