@@ -3,7 +3,9 @@ import styles from './Produtos.module.css'
 
 const Produtos = () => {
   return (
-    <div>Produtos</div>
+    <div className={styles.produto}>
+      <h1>Produtos</h1>
+    </div>
   )
 }
 

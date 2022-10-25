@@ -3,7 +3,7 @@ import styles from './Contato.module.css'
 
 export const Contato = () => {
   return (
-    <div>Contato</div>
+    <section className={styles.contato}>Contato</section>
   )
 }
 
