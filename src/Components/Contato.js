@@ -6,10 +6,10 @@ import Head from './Head'
 export const Contato = () => {
   return (
     <section className={`${styles.contato} animeLeft` }>
-      <Head title="Ranek | Contato" description="Entre em contato" />
+      <Head title="Ranek | Contact" description="Contact us" />
       <img src={foto} alt="Typewriter" />
       <div>
-        <h1>Contato</h1>
+        <h1>Contact us</h1>
         <ul className={styles.dados}>
           <li>e-mail: blabla@gmail.com</li>
           <li>phone number: 9999-9999</li>
