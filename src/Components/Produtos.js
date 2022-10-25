@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from './Produtos.module.css'
 
-export const Produtos = () => {
+const Produtos = () => {
   return (
     <div>Produtos</div>
   )
 }
+
+export default Produtos

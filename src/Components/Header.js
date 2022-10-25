@@ -1,9 +1,19 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-export const Header = () => {
+const Header = () => {
   return (
-    <div>
-      <h1>Header</h1>
-    </div>
+    <nav classname="styles.header">
+      <ul>
+        <li>
+          <NavLink to="/" end></NavLink>
+        </li>
+        <li>
+          <NavLink to="contato">Contato</NavLink>
+        </li>
+      </ul>
+    </nav>
   )
 }
+
+export default Header
