@@ -1,2 +1,15 @@
 
-.header
+.header {
+  margin-bottom: 2rem ;
+}
+
+.header ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.header ul li{
+  margin-right: 1rem;
+
+}
