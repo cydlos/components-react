@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from './Contato.module.css'
 import foto from '../img/typewriter.jpeg'
+import Head from './Head'
 
 export const Contato = () => {
   return (
     <section className={`${styles.contato} animeLeft` }>
+      <Head title="Ranek | Contato" description="Entre em contato" />
       <img src={foto} alt="Typewriter" />
       <div>
         <h1>Contato</h1>
