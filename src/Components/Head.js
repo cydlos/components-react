@@ -7,3 +7,5 @@ export const Head = (props) => {
   }, [props])
   return <></>
 }
+
+export default Head

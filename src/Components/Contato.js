@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Contato.module.css'
-import foto from '../img/typewriter.jpeg'
+import foto from '../img/typewriter.jpg'
 import Head from './Head'
 
 export const Contato = () => {
@@ -10,7 +10,7 @@ export const Contato = () => {
       <img src={foto} alt="Typewriter" />
       <div>
         <h1>Contato</h1>
-        <ul>
+        <ul className={styles.dados}>
           <li>e-mail: blabla@gmail.com</li>
           <li>phone number: 9999-9999</li>
           <li>address: Blabla St. 498</li>

@@ -16,7 +16,7 @@
 }
 
 .dados li::before {
-  content: "📞";
+  content: " ";
   display: inline-block;
   margin-right: 0.5rem;
   width: 20px;
