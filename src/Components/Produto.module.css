@@ -1,9 +1,9 @@
-.produtos {
+.produto {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
-.nome {
-  
+.produto img {
+  margin-bottom: 2rem;
 }
