@@ -3,6 +3,10 @@ import styles from './Produto.module.css'
 
 export const Produto = () => {
   return (
-    <div>Produto</div>
+    <div className={styles.produto}>
+      <h1>Produto</h1>
+    </div>
   )
 }
+
+export default Produto
