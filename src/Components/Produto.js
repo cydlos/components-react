@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Produto.module.css";
 import { useParams } from "react-router-dom";
-import Produtos from "./Produtos";
+import Head from "./Head";
 
 const Produto = () => {
   const [produto, setProduto] = React.useState(null);
@@ -25,12 +25,14 @@ const Produto = () => {
     fetchProduto(`https://ranekapi.origamid.dev/json/api/produto/${id}`);
   }, [id]);
 
-  if (loading) return <div className={styles.loading}>Carregando...</div>;
-  if (error) return <p> {error} </p>
+
+  if (error) return <p> {error} </p>;
   if (produto === null ) return null;
+  if (loading) return <div className={styles.loading} >Carregando...</div>;
   return (
-    <section className={styles.produto}>
-      {produto.foto.map ((foto) => <img src={foto.src} alt={foto.titulo} />)}
+    <section className={styles.produto + " animeLeft"}>
+      <Head title={`Ranek | ${produto.nome}`} description={`Ranek | ${produto.descricao}`} />
+      {produto.fotos.map ((foto) => <img src={foto.src} alt={foto.titulo} />)}
       <div>
           <h1> {produto.nome}</h1>
           <span className={styles.preco}>R$ {produto.preco}</span>
