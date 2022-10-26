@@ -53,7 +53,7 @@ const App = () => {
       />
       <label htmlFor="cep">Cep</label>
       <input type="text" id="cep" value={form.cep} onChange={handleChange} />
-      <label htmlFor="senha">Rua</label>
+      <label htmlFor="rua">Rua</label>
       <input type="text" id="rua" value={form.rua} onChange={handleChange} />
       <label htmlFor="numero">Número</label>
       <input
