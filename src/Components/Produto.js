@@ -4,12 +4,15 @@ import { useParams } from 'react-router-dom'
 
 const Produto = () => {
   const [produto, setProduto] = React.useState(null)
+  const [loading, setLoading] = React.useState(false)
+  const [error, setError] = React.useState(null)
   const { id } = useParams();
 
   React.useEffect (() => {
     async function fetchProduto(url) {
+      setLoading(true);
       const response = await fetch(url);
-      const json = response.json();
+      const json = await response.json();
       setProduto(json);
     }
     fetchProduto(`https://ranekapi.origamid.dev/json/api/produto/${id}`);
