@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Radio = ({ pergunta, options, onChange, value, id, active }) => {
+const Radio = ({ question, options, onChange, value, id, active }) => {
   if (!active) return null;
   return (
     <fieldset>
-      <legend>{pergunta}</legend>
+      <legend>{question}</legend>
       {options.map((option) => (
         <label key={option}>
           <input

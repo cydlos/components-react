@@ -2,15 +2,15 @@ import React from "react";
 
 const App = () => {
   const [form, setForm] = React.useState({
-    nome: "",
+    name: "",
     email: "",
-    senha: "",
-    cep: "",
-    rua: "",
-    numero: "",
-    bairro: "",
-    cidade: "",
-    estado: "",
+    password: "",
+    zipcode: "",
+    street: "",
+    number: "",
+    neighborhood: "",
+    city: "",
+    state: "",
   });
 
   const [response, setResponse] = React.useState(null);
@@ -35,8 +35,8 @@ const App = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="nome">Nome</label>
-      <input type="text" id="nome" value={form.nome} onChange={handleChange} />
+      <label htmlFor="name">Name</label>
+      <input type="text" id="name" value={form.name} onChange={handleChange} />
       <label htmlFor="email">Email</label>
       <input
         type="email"
@@ -44,21 +44,21 @@ const App = () => {
         value={form.email}
         onChange={handleChange}
       />
-      <label htmlFor="senha">Senha</label>
+      <label htmlFor="password">Password</label>
       <input
         type="password"
-        id="senha"
-        value={form.senha}
+        id="password"
+        value={form.password}
         onChange={handleChange}
       />
-      <label htmlFor="cep">Cep</label>
-      <input type="text" id="cep" value={form.cep} onChange={handleChange} />
-      <label htmlFor="rua">Rua</label>
-      <input type="text" id="rua" value={form.rua} onChange={handleChange} />
-      <label htmlFor="numero">Número</label>
+      <label htmlFor="zipcode">Zipcode</label>
+      <input type="text" id="zipcode" value={form.zipcode} onChange={handleChange} />
+      <label htmlFor="street">Street</label>
+      <input type="text" id="street" value={form.street} onChange={handleChange} />
+      <label htmlFor="number">Number</label>
       <input
         type="text"
-        id="numero"
+        id="number"
         value={form.number}
         onChange={handleChange}
       />
@@ -73,7 +73,7 @@ const App = () => {
       <input
         type="text"
         id="city"
-        value={form.cidade}
+        value={form.city}
         onChange={handleChange}
       />
       <label htmlFor="state">State</label>

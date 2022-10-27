@@ -1,9 +1,0 @@
-.title,
-.price {
-  color: #43c;
-  font-weight: bold;
-}
-
-.buy {
-  transform: rotate(90deg) translateY(-100px);
-}

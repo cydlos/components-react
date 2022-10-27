@@ -1,43 +1,47 @@
 import React from 'react';
 import Radio from './Radio';
 
-const perguntas = [
+const questions = [
   {
-    pergunta: 'Qual a única seleção pentacampeã mundial de futebol?',
+    question: 'Which is the only five-time football world champion team?',
     options: [
-      'Brasil',
-      'Alemanha',
-      'Itália',
+      'Brazil',
+      'France',
+      'Uruguay',
     ],
-    resposta: 'Brasil',
+    answer: 'Brazil',
     id: 'p1',
   },
   {
-    pergunta: 'Qual a capital do Rio Grande do Sul?',
+    question: 'What is the capital of Australia?',
     options: [
-      'Pelotas',
-      'Porto Alegre',
-      'Rio Grande',
+      'Sidney',
+      'Canberra',
+      'Melbourne',
     ],
-    resposta: 'Porto Alegre',
+    answer: 'Canberra',
     id: 'p2',
   },
   {
-    pergunta: 'Quantas estrelas tem a bandeira do Brasil?',
+    question: 'How many starts are on the Brazilian flag?',
     options: ['25', '20', '27'],
-    resposta: '27',
+    answer: '27',
     id: 'p3',
   },
   {
-    pergunta: 'Quem é o vilão do Peter Pan?',
-    options: ['Capitão Gancho', 'Thanos', 'Scar'],
-    resposta: 'Capitão Gancho',
+    question: 'Who is the villain in the Peter Pan movie?',
+    options: [
+      'Hook',
+      'Thanos',
+      'Scar'
+    ],
+    answer: 'Hook',
     id: 'p4',
   },
 ];
 
 const App = () => {
-  const [respostas, setRespostas] = React.useState({
+  const [answers, setAnswers] = React.useState({
     p1: '',
     p2: '',
     p3: '',
@@ -47,34 +51,34 @@ const App = () => {
   const [resultado, setResultado] = React.useState(null);
 
   const handleChange = ({ target }) => {
-    setRespostas({ ...respostas, [target.id]: target.value });
+    setAnswers({ ...answers, [target.id]: target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (slide < perguntas.length - 1) {
+    if (slide < questions.length - 1) {
       setSlide(slide + 1);
     } else {
-      const corretas = perguntas.filter(
-        ({ id, resposta }) => respostas[id] === resposta,
+      const correct = questions.filter(
+        ({ id, answer }) => answers[id] === answer,
       );
-      setResultado(`Você acertou ${corretas.length} de ${perguntas.length}`);
+      setResultado(`You had ${correct.length} correct answers out of ${questions.length}`);
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      {perguntas.map((pergunta, index) => (
+      {questions.map((question, index) => (
         <Radio
           active={slide === index}
-          value={respostas[pergunta.id]}
+          value={answers[question.id]}
           onChange={handleChange}
-          key={pergunta.id}
-          {...pergunta}
+          key={question.id}
+          {...question}
         />
       ))}
       {resultado && <p>{resultado}</p>}
-      <button>{slide < perguntas.length - 1 ? 'Próxima' : 'Resultado'}</button>
+      <button>{slide < questions.length - 1 ? 'Next' : 'Result'}</button>
     </form>
   );
 }
