@@ -5,15 +5,15 @@ const Title = styled.h1`
   color: tomato;
 `;
 
-const ProdutosContainer = styled.div`
+const ProductContainer = styled.div`
   display: flex;
 `;
 
-const Produto = styled.div`
+const Product = styled.div`
   flex: 1;
 `;
 
-const Comprar = styled.button`
+const Buy = styled.button`
   font-size: 1.5em;
   background: transparent;
   padding: 0.5rem;
@@ -22,7 +22,7 @@ const Comprar = styled.button`
   cursor: pointer;
 `;
 
-const Preco = styled.span`
+const Price = styled.span`
   background: #53d956;
   color: white;
   display: inline-block;
@@ -32,19 +32,21 @@ const Preco = styled.span`
 
 const App = () => {
   return (
-    <ProdutosContainer>
-      <Produto>
+    <ProductContainer>
+      <Product>
         <Title>
-          Notebook <Preco>R$ 1999</Preco>
+          Notebook <Price>R$ 1999</Price>
         </Title>
-        <Comprar>Comprar</Comprar>
-      </Produto>
-      <Produto>
+        <Buy>Buy</Buy>
+      </Product>
+      <Product>
         <Title>
-          Smartphone <Preco>R$ 2999</Preco>
+          Smartphone <Price>R$ 2999</Price>
         </Title>
-        <Comprar>Comprar</Comprar>
-      </Produto>
-    </ProdutosContainer>
+        <Buy>Buy</Buy>
+      </Product>
+    </ProductContainer>
   );
 };
+
+export default App;

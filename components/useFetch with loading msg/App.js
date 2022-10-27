@@ -9,7 +9,7 @@ const App = () => {
   }, [request]);
 
   if (error) return <p>{error}</p>;
-  if (loading) return <p>Carregando...</p>;
+  if (loading) return <p>Loading...</p>;
   if (data) return <div>{data.nome}</div>;
   else return null;
 };

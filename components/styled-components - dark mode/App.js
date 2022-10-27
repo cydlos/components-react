@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 
 const Button = styled.button`
-  background: ${({ ativo }) => (ativo ? '#ff003a' : '#000')};
+  background: ${({ active }) => (active ? '#ff003a' : '#000')};
   border: 1px solid black;
   font-size: 1rem;
   padding: 0.5rem;
@@ -12,7 +12,7 @@ const Button = styled.button`
 `;
 
 const Container = styled.div`
-  background-color: ${({ ativo }) => (ativo ? '#17405f' : '#fff')};
+  background-color: ${({ active }) => (active ? '#17405f' : '#fff')};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,12 +21,12 @@ const Container = styled.div`
 `;
 
 const App = () => {
-  const [ativo, setAtivo] = React.useState(false);
+  const [active, setactive] = React.useState(false);
 
   return (
-    <Container ativo={ativo} onClick={() => setAtivo(!ativo)}>
-      <Button ativo={ativo} onClick={() => setAtivo(!ativo)}>
-        {ativo ? 'Dark mode on' : 'Activate dark mode'}
+    <Container ativo={active} onClick={() => setactive(!active)}>
+      <Button active={active} onClick={() => setactive(!active)}>
+        {active ? 'Dark mode on' : 'Activate dark mode'}
       </Button>
   </Container>
   );
