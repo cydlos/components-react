@@ -1,17 +1,17 @@
 import React from 'react';
 
 const App = () => {
-  const [mensagem, setMensagem] = React.useState('');
+  const [message, setMessage] = React.useState('');
 
   return (
     <form>
       <textarea
-        id="mensagem"
-        value={mensagem}
+        id="message"
+        value={message}
         rows="5"
-        onChange={({ target }) => setMensagem(target.value)}
+        onChange={({ target }) => setMessage(target.value)}
       />
-      <p>{mensagem}</p>
+      <p>{message}</p>
     </form>
   );
 };
