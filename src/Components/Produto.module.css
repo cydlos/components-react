@@ -6,14 +6,12 @@
 
 .produto img {
   margin-bottom: 2rem;
-  margin-left:  2rem;
-  border-radius: 4px;
 }
 
 .preco {
-  padding: 0.5rem;
+  padding: 0.5 rem;
   background: #91fb5d;
-  color: #017e00;
+  color: #017e01;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 4px;
 }
@@ -21,5 +19,5 @@
 .descricao {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
-  line-height: 1.5;
+  line-height: 1.2;
 }
