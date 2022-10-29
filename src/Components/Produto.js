@@ -28,7 +28,7 @@ const Produto = () => {
 
   if (error) return <p> {error} </p>;
   if (produto === null ) return null;
-  if (loading) return <div className={styles.loading} >Carregando...</div>;
+  if (loading) return <div className={styles.loading} ></div>;
   return (
     <section className={styles.produto + " animeLeft"}>
       <Head title={`Ranek | ${produto.nome}`} description={`Ranek | ${produto.descricao}`} />
